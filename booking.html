@@ -1,61 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Booking - Baía</title>
-  <link rel="stylesheet" href="css/style.css"/>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  />
+
 </head>
+
 <body>
 
+
+<!-- NAVBAR -->
+
 <header>
+
   <nav>
+
     <h1>Baía</h1>
 
     <ul>
+
       <li><a href="index.html">Home</a></li>
+
       <li><a href="menu.html">Menu</a></li>
+
       <li><a href="booking.html">Booking</a></li>
+
       <li><a href="order.html">Order</a></li>
+
       <li><a href="signin.html">Sign In</a></li>
+
     </ul>
+
   </nav>
+
 </header>
 
-<section class="section">
 
-  <h2>Reserve a Table</h2>
+<!-- HERO -->
 
-  <form id="bookingForm">
+<section class="page-hero">
 
-    <input type="text" placeholder="Full Name" required>
+  <div class="page-overlay">
 
-    <input type="email" placeholder="Email Address" required>
+    <h1>Reserve a Table</h1>
 
-    <input type="tel" placeholder="Phone Number" required>
+    <p>
+      Experience luxury waterfront dining and unforgettable seafood cuisine.
+    </p>
 
-    <input type="date" required>
-
-    <input type="time" required>
-
-    <select required>
-      <option value="">Party Size</option>
-      <option>2 Guests</option>
-      <option>4 Guests</option>
-      <option>6 Guests</option>
-      <option>8 Guests</option>
-    </select>
-
-    <textarea rows="5" placeholder="Special Requests"></textarea>
-
-    <button type="submit">Book Now</button>
-
-  </form>
+  </div>
 
 </section>
 
+
+<!-- FORM -->
+
+<section class="form-section">
+
+  <div class="form-container">
+
+    <form id="bookingForm">
+
+      <input
+        type="text"
+        placeholder="Full Name"
+        required
+      >
+
+      <input
+        type="email"
+        placeholder="Email Address"
+        required
+      >
+
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        required
+      >
+
+      <input
+        type="date"
+        required
+      >
+
+      <input
+        type="time"
+        required
+      >
+
+      <select required>
+
+        <option value="">
+          Party Size
+        </option>
+
+        <option>2 Guests</option>
+        <option>4 Guests</option>
+        <option>6 Guests</option>
+        <option>8 Guests</option>
+
+      </select>
+
+      <textarea
+        rows="5"
+        placeholder="Special Requests"
+      ></textarea>
+
+      <button type="submit">
+        Book Now
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
 <footer>
-  <p>© 2026 Baía Seafood Restaurant</p>
+
+  <p>
+    © 2026 Baía Seafood Restaurant
+  </p>
+
 </footer>
 
 <script src="js/booking.js"></script>

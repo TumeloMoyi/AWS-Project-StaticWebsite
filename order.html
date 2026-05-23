@@ -1,56 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Order Online - Baía</title>
-  <link rel="stylesheet" href="css/style.css"/>
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  />
+
 </head>
+
 <body>
 
+
 <header>
+
   <nav>
+
     <h1>Baía</h1>
 
     <ul>
+
       <li><a href="index.html">Home</a></li>
+
       <li><a href="menu.html">Menu</a></li>
+
       <li><a href="booking.html">Booking</a></li>
+
       <li><a href="order.html">Order</a></li>
+
       <li><a href="signin.html">Sign In</a></li>
+
     </ul>
+
   </nav>
+
 </header>
 
-<section class="section">
 
-  <h2>Place Your Order</h2>
+<section class="page-hero">
 
-  <form id="orderForm">
+  <div class="page-overlay">
 
-    <input type="text" placeholder="Full Name" required>
+    <h1>Order Online</h1>
 
-    <input type="tel" placeholder="Phone Number" required>
+    <p>
+      Enjoy premium seafood cuisine delivered directly to you.
+    </p>
 
-    <select required>
-      <option value="">Select Menu Item</option>
-      <option>Seafood Platter - R850</option>
-      <option>Grilled Lobster - R695</option>
-      <option>Sushi Deluxe - R420</option>
-    </select>
-
-    <input type="number" placeholder="Quantity" min="1">
-
-    <textarea rows="5" placeholder="Delivery Address"></textarea>
-
-    <button type="submit">Submit Order</button>
-
-  </form>
+  </div>
 
 </section>
 
+
+<section class="form-section">
+
+  <div class="form-container">
+
+    <form id="orderForm">
+
+      <input
+        type="text"
+        placeholder="Full Name"
+        required
+      >
+
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        required
+      >
+
+      <select required>
+
+        <option value="">
+          Select Menu Item
+        </option>
+
+        <option>
+          Seafood Platter — R850
+        </option>
+
+        <option>
+          Grilled Lobster — R695
+        </option>
+
+        <option>
+          Sushi Deluxe — R420
+        </option>
+
+      </select>
+
+      <input
+        type="number"
+        placeholder="Quantity"
+        min="1"
+      >
+
+      <textarea
+        rows="5"
+        placeholder="Delivery Address"
+      ></textarea>
+
+      <button type="submit">
+        Submit Order
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
 <footer>
-  <p>© 2026 Baía Seafood Restaurant</p>
+
+  <p>
+    © 2026 Baía Seafood Restaurant
+  </p>
+
 </footer>
 
 <script src="js/order.js"></script>
