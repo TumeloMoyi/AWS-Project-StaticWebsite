@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Order Online - Baía</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online - Baía Seafood</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Quick inline styles to ensure proper layout */
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+      color: white;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #0f1b25;
+      color: white;
+    }
+    button {
+      width: 100%;
+      background: #d4af37;
+      color: black;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    button:hover {
+      background: white;
+      color: black;
+    }
+    #orderMessage {
+      margin-top: 1rem;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: rgba(7,16,24,0.9);
+      border-radius: 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -30,59 +82,50 @@
 
 <section class="form-section">
   <div class="form-container">
-    
-    <!--  All inputs now have name + id attributes -->
     <form id="orderForm">
-      <input 
-        type="text" 
-        name="fullName"      <!-- Backend expects "fullName" -->
-        id="fullName"
-        placeholder="Full Name" 
-        required
-      >
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" name="fullName" id="fullName" placeholder="John Doe" required>
+      </div>
 
-      <input 
-        type="tel" 
-        name="phone"         <!-- Backend expects "phone" -->
-        id="phone"
-        placeholder="Phone Number" 
-        required
-      >
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" name="email" id="email" placeholder="john@example.com" required>
+      </div>
 
-      <select name="menuItem" id="menuItem" required>
-        <option value="">Select Menu Item</option>
-        <option value="Seafood Platter">Seafood Platter — R850</option>
-        <option value="Grilled Lobster">Grilled Lobster — R695</option>
-        <option value="Sushi Deluxe">Sushi Deluxe — R420</option>
-      </select>
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" name="phone" id="phone" placeholder="082 123 4567" required>
+      </div>
 
-      <input 
-        type="number" 
-        name="quantity"      <!-- Backend expects "quantity" -->
-        id="quantity"
-        placeholder="Quantity" 
-        min="1"
-        required
-      >
+      <div class="form-group">
+        <label>Menu Item *</label>
+        <select name="menuItem" id="menuItem" required>
+          <option value="">Select Menu Item</option>
+          <option value="Seafood Platter">Seafood Platter — R850</option>
+          <option value="Grilled Lobster">Grilled Lobster — R695</option>
+          <option value="Sushi Deluxe">Sushi Deluxe — R420</option>
+        </select>
+      </div>
 
-      <textarea 
-        name="deliveryAddress"  <!-- Backend expects "deliveryAddress" -->
-        id="deliveryAddress"
-        rows="3" 
-        placeholder="Delivery Address"
-        required
-      ></textarea>
+      <div class="form-group">
+        <label>Quantity *</label>
+        <input type="number" name="quantity" id="quantity" placeholder="1" min="1" value="1" required>
+      </div>
 
-      <textarea 
-        name="specialInstructions"
-        id="specialInstructions"
-        rows="2" 
-        placeholder="Special Instructions (optional)"
-      ></textarea>
+      <div class="form-group">
+        <label>Delivery Address *</label>
+        <textarea name="deliveryAddress" id="deliveryAddress" rows="3" placeholder="Your full delivery address" required></textarea>
+      </div>
 
-      <button type="submit">Submit Order</button>
+      <div class="form-group">
+        <label>Special Instructions (optional)</label>
+        <textarea name="specialInstructions" id="specialInstructions" rows="2" placeholder="Any special requests?"></textarea>
+      </div>
+
+      <button type="submit">Place Order</button>
     </form>
-    
+
     <div id="orderMessage"></div>
   </div>
 </section>
