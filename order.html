@@ -1,135 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8"/>
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Order Online - Baía</title>
-
-  <link
-    rel="stylesheet"
-    href="css/style.css"
-  />
-
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-
 <body>
 
-
 <header>
-
   <nav>
-
     <h1>Baía</h1>
-
     <ul>
-
       <li><a href="index.html">Home</a></li>
-
       <li><a href="menu.html">Menu</a></li>
-
       <li><a href="booking.html">Booking</a></li>
-
       <li><a href="order.html">Order</a></li>
-
       <li><a href="signin.html">Sign In</a></li>
-
     </ul>
-
   </nav>
-
 </header>
 
-
 <section class="page-hero">
-
   <div class="page-overlay">
-
     <h1>Order Online</h1>
-
-    <p>
-      Enjoy premium seafood cuisine delivered directly to you.
-    </p>
-
+    <p>Enjoy premium seafood cuisine delivered directly to you.</p>
   </div>
-
 </section>
-
 
 <section class="form-section">
-
   <div class="form-container">
-
+    
+    <!--  All inputs now have name + id attributes -->
     <form id="orderForm">
-
-      <input
-        type="text"
-        placeholder="Full Name"
+      <input 
+        type="text" 
+        name="fullName"      <!-- Backend expects "fullName" -->
+        id="fullName"
+        placeholder="Full Name" 
         required
       >
 
-      <input
-        type="tel"
-        placeholder="Phone Number"
+      <input 
+        type="tel" 
+        name="phone"         <!-- Backend expects "phone" -->
+        id="phone"
+        placeholder="Phone Number" 
         required
       >
 
-      <select required>
-
-        <option value="">
-          Select Menu Item
-        </option>
-
-        <option>
-          Seafood Platter — R850
-        </option>
-
-        <option>
-          Grilled Lobster — R695
-        </option>
-
-        <option>
-          Sushi Deluxe — R420
-        </option>
-
+      <select name="menuItem" id="menuItem" required>
+        <option value="">Select Menu Item</option>
+        <option value="Seafood Platter">Seafood Platter — R850</option>
+        <option value="Grilled Lobster">Grilled Lobster — R695</option>
+        <option value="Sushi Deluxe">Sushi Deluxe — R420</option>
       </select>
 
-      <input
-        type="number"
-        placeholder="Quantity"
+      <input 
+        type="number" 
+        name="quantity"      <!-- Backend expects "quantity" -->
+        id="quantity"
+        placeholder="Quantity" 
         min="1"
+        required
       >
 
-      <textarea
-        rows="5"
+      <textarea 
+        name="deliveryAddress"  <!-- Backend expects "deliveryAddress" -->
+        id="deliveryAddress"
+        rows="3" 
         placeholder="Delivery Address"
+        required
       ></textarea>
 
-      <button type="submit">
-        Submit Order
-      </button>
+      <textarea 
+        name="specialInstructions"
+        id="specialInstructions"
+        rows="2" 
+        placeholder="Special Instructions (optional)"
+      ></textarea>
 
+      <button type="submit">Submit Order</button>
     </form>
-
+    
+    <div id="orderMessage"></div>
   </div>
-
 </section>
 
-
 <footer>
-
-  <p>
-    © 2026 Baía Seafood Restaurant
-  </p>
-
+  <p>© 2026 Baía Seafood Restaurant</p>
 </footer>
 
-<script src="js/order.js"></script>
-
+<script src="js/api.js"></script>
 </body>
 </html>

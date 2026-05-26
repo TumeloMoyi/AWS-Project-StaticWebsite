@@ -1,144 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="UTF-8"/>
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <title>Booking - Baía</title>
-
-  <link
-    rel="stylesheet"
-    href="css/style.css"
-  />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Baía Seafood</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-weight: bold; margin-bottom: 0.3rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #2c5f2d; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #1f4520; }
+    #bookingMessage { margin-top: 20px; }
+  </style>
 </head>
-
 <body>
 
-
-<!-- NAVBAR -->
-
 <header>
-
   <nav>
-
     <h1>Baía</h1>
-
     <ul>
-
       <li><a href="index.html">Home</a></li>
-
       <li><a href="menu.html">Menu</a></li>
-
       <li><a href="booking.html">Booking</a></li>
-
       <li><a href="order.html">Order</a></li>
-
       <li><a href="signin.html">Sign In</a></li>
-
     </ul>
-
   </nav>
-
 </header>
 
-
-<!-- HERO -->
-
 <section class="page-hero">
-
   <div class="page-overlay">
-
     <h1>Reserve a Table</h1>
-
-    <p>
-      Experience luxury waterfront dining and unforgettable seafood cuisine.
-    </p>
-
+    <p>Experience luxury waterfront dining and unforgettable seafood cuisine.</p>
   </div>
-
 </section>
-
-
-<!-- FORM -->
 
 <section class="form-section">
-
   <div class="form-container">
-
     <form id="bookingForm">
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" name="fullName" id="fullName" placeholder="John Doe" required>
+      </div>
 
-      <input
-        type="text"
-        placeholder="Full Name"
-        required
-      >
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" name="email" id="email" placeholder="john@example.com" required>
+      </div>
 
-      <input
-        type="email"
-        placeholder="Email Address"
-        required
-      >
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" name="phone" id="phone" placeholder="082 123 4567" required>
+      </div>
 
-      <input
-        type="tel"
-        placeholder="Phone Number"
-        required
-      >
+      <div class="form-group">
+        <label>Booking Date *</label>
+        <input type="date" name="bookingDate" id="bookingDate" required>
+      </div>
 
-      <input
-        type="date"
-        required
-      >
+      <div class="form-group">
+        <label>Booking Time *</label>
+        <input type="time" name="bookingTime" id="bookingTime" required>
+      </div>
 
-      <input
-        type="time"
-        required
-      >
+      <div class="form-group">
+        <label>Party Size *</label>
+        <select name="partySize" id="partySize" required>
+          <option value="">Select</option>
+          <option value="2">2 Guests</option>
+          <option value="4">4 Guests</option>
+          <option value="6">6 Guests</option>
+          <option value="8">8 Guests</option>
+        </select>
+      </div>
 
-      <select required>
+      <div class="form-group">
+        <label>Special Requests (optional)</label>
+        <textarea name="specialRequests" id="specialRequests" rows="3" placeholder="Window table, anniversary, etc."></textarea>
+      </div>
 
-        <option value="">
-          Party Size
-        </option>
-
-        <option>2 Guests</option>
-        <option>4 Guests</option>
-        <option>6 Guests</option>
-        <option>8 Guests</option>
-
-      </select>
-
-      <textarea
-        rows="5"
-        placeholder="Special Requests"
-      ></textarea>
-
-      <button type="submit">
-        Book Now
-      </button>
-
+      <button type="submit">Book Now</button>
     </form>
 
+    <div id="bookingMessage"></div>
   </div>
-
 </section>
 
-
 <footer>
-
-  <p>
-    © 2026 Baía Seafood Restaurant
-  </p>
-
+  <p>© 2026 Baía Seafood Restaurant</p>
 </footer>
 
-<script src="js/booking.js"></script>
-
+<script src="js/api.js"></script>
 </body>
 </html>
